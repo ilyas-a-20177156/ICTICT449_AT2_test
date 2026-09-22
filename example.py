@@ -1,4 +1,16 @@
 from random import randint 
+
+def password_checker(question, secret_word):
+    while True:
+        password = input(question)
+        if password.isalpha() == False:
+            print("Sorry, that is not an acceptable guess. Try again")
+        elif len(password) != len(secret_word):
+            print(f"Sorry, that guess must be {len(secret_word)} letters long.")
+        else:
+            break
+    return password
+
 while True:
     name  = input("Please enter your name: \n")
     if name.isalpha() == False:
@@ -28,3 +40,4 @@ print(f"Hello {name.upper()}, {declaritive}!!! " * number)
 descriptor_name = f"{descriptor} {name.capitalize()}"
 
 secret_word = "testy"
+
