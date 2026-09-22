@@ -13,10 +13,10 @@ def password_checker(question, secret_word):
 
 while True:
     name  = input("Please enter your name: \n")
-    if name.isalpha() == False:
-        print("No name contains those characters!")
-    else:
+    if all(character.isalpha() or character in ["'","-"] for character in name) == True:
         break
+    else:
+        print("No name contains those characters!")
 
 while True:
     age = input("What's your age? \n")
