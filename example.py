@@ -39,5 +39,17 @@ else:
 print(f"Hello {name.upper()}, {declaritive}!!! " * number)
 descriptor_name = f"{descriptor} {name.capitalize()}"
 
-secret_word = "testy"
+secret_word = "aorta"
+
+print(f"Ok {descriptor_name}, please guess what is the 5 letter password. \nYou'll have 5 tries")
+intro_sentence = f"{descriptor_name.capitalize()}, please enter your first guess"
+subsequent_sentence = f"{descriptor_name.capitalize()}, please enter another guess: \n"
+
+hints = [
+    "Hint: it's in the body",
+    "Hint: it carries oxygenated blood",
+    "Hint: it's a major blood vessel",
+    "Hint: its connected to the heart"
+    "Sorry, you're out of tries! :("
+]
 
